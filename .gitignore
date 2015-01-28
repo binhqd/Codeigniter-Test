@@ -1,1 +1,7 @@
 vendor/
+.project
+.buildpath
+composer.lock
+user_guide/
+.settings/
+bower_components/
