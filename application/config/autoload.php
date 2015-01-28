@@ -52,7 +52,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array();
+$autoload['libraries'] = array('session');
 
 
 /*
@@ -109,8 +109,9 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array();
+$autoload['model'] = array('MyExtendedModel');
 $autoload['helper'] = array('url');
 
 /* End of file autoload.php */
 /* Location: ./application/config/autoload.php */
+//require dirname(__FILE__) . '/../core/MyExtendedModel.php';

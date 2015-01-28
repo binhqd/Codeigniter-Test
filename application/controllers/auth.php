@@ -10,7 +10,6 @@ class Auth extends CI_Controller
         // Call the Model constructor
         parent::__construct();
         $this->load->model('Users_model', 'users');
-        $this->load->library('session');
     }
 
     private function checkAuth($callback)

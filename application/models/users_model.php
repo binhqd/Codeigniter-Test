@@ -1,7 +1,7 @@
 <?php
 use GuzzleHttp\Client;
 
-class Users_model extends CI_Model
+class Users_model extends MyExtendedModel
 {
 
     const LOGIN_URL = 'http://adminretail.yainsights.com/ws/useraccounthandle/getAccountByUsername';

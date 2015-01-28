@@ -1,5 +1,4 @@
 <?php
-
 if (! defined('BASEPATH'))
     exit('No direct script access allowed');
 
@@ -11,7 +10,7 @@ class Profile extends CI_Controller
         // Call the Model constructor
         parent::__construct();
         $this->load->model('Users_model', 'users');
-        $this->load->library('session');
+        $this->load->model('Customers_model', 'customers');
     }
 
     /**
@@ -27,7 +26,7 @@ class Profile extends CI_Controller
      *
      * So any other public methods not prefixed with an underscore will
      * map to /index.php/welcome/<method_name>
-     * 
+     *
      * @see http://codeigniter.com/user_guide/general/urls.html
      */
     public function index()
@@ -38,6 +37,9 @@ class Profile extends CI_Controller
         }
         
         $data['userdata'] = $currentUser;
+        
+        $customers = $this->customers->all();
+        $data['customers'] = $customers;
         
         $this->load->view('profile', $data);
     }
