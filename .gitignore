@@ -5,3 +5,4 @@ composer.lock
 user_guide/
 .settings/
 bower_components/
+/user_guide
