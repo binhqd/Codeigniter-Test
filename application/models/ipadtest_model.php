@@ -44,10 +44,10 @@ class IpadTest_model extends CI_Model
             
             self::describe("<hr/><u>".self::extra($n)." drop</u>. Perform test at ".self::extra($storeyNo)." storey.", "p", $describe);
             
-            // If first item is broke
+            // If first item is broken
             if ($storeyNo > $result) {
-                self::describe("<hr/><span style='color:red'>First item is broke at ".self::extra($storeyNo)." storey.</span>", "p", $describe);
-                // number of item remaining after the first item is broke
+                self::describe("<hr/><span style='color:red'>First item is broken at ".self::extra($storeyNo)." storey.</span>", "p", $describe);
+                // number of item remaining after the first item is broken
                 $tries = $noIpads - 1;
                 
                 while ($tries > 0) {
@@ -63,7 +63,7 @@ class IpadTest_model extends CI_Model
                         self::describe("<span style='color:blue'>Good at ".self::extra($storeyNo)." storey.</span>", "p", $describe);
                         break; // Stop any loop
                     }
-                    self::describe("Broke again", "p", $describe);
+                    self::describe("Ipad is broken again", "p", $describe);
                     
                     $tries --; // decrease number of tries
                 }
